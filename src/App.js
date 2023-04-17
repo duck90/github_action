@@ -17,7 +17,7 @@ function App() {
         >
           Learn React
         </a>
-        <h1>13213</h1>
+        <h1>배포 적용 테스트</h1>
       </header>
     </div>
   );
