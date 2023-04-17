@@ -45,4 +45,4 @@ jobs:
           --application-name tutorial
           --deployment-config-name CodeDeployDefault.AllAtOnce
           --deployment-group-name duck
-          --s3-location donald-kim-test,build-fe.zip,bundleType=zip
+          --s3-location bucket=donald-kim-test,key=build-fe.zip,bundleType=zip
