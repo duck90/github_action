@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Code Deploy use github actions at AWS ec2 instance
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## PROJECT TREE
 
-## Available Scripts
+github_action_test
+└─ .github
+   └─ workflows
+      └─ deploy.yml
+├─ README.md
+├─ appspec.yml
+├─ build
+│  ├─ ...
+├─ deploy-after.sh
+├─ deploy-before.sh
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ ...
+├─ server.js
+└─ src
+   ├─ App.css
+   ├─ App.js
+   ├─ App.test.js
+   ├─ index.css
+   ├─ index.js
+   ├─ logo.svg
+   ├─ reportWebVitals.js
+   └─ setupTests.js
 
-In the project directory, you can run:
 
-### `npm start`
+### FLOW
+1. master branch push
+2. (github action) build & upload s3 bucket build file
+3. (AWS code deploy) upload ec2 instance from s3 build file
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Description
+deploy.yml: github action에서 수행해야 할 동작 정의
+appspec.yml: code deploy에서 배포를 관리 (ec2 인스턴스에 배포 동작 정의)
+appspec.yml 내에 있는 hooks 에서 배포 순서에 따른 동작 정의
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+deploy-before.sh: 사전 설치 작업 주기에 실행 되는 동작 정의 (BeforeInstall)
+deploy-after.sh: 서버 재시작 (ApplicationStart)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 참고
 
-### `npm run build`
+REACT EC2 배포
+[https://velog.io/@kcj_dev96/%ED%94%84%EB%A1%A0%ED%8A%B8-%EB%B0%B0%ED%8F%AC-%EB%B0%A9%EB%B2%95-1%ED%8E%B8AWS-EC2-with-React-Express-%ED%99%98%EA%B2%BD]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Github Action & AWS Code deploy
+[https://velog.io/@eeapbh/EC2%EC%97%90-react-%EC%9E%90%EB%8F%99-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B02-github-actions-S3-codedeploy-EC2-CodeDeploy-IAM-%EC%84%A4%EC%A0%95]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
