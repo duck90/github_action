@@ -51,10 +51,10 @@ github_action_test
 
 ## 참고
 
-- REACT EC2 배포
+- REACT EC2 배포  
 [https://velog.io/@kcj_dev96/%ED%94%84%EB%A1%A0%ED%8A%B8-%EB%B0%B0%ED%8F%AC-%EB%B0%A9%EB%B2%95-1%ED%8E%B8AWS-EC2-with-React-Express-%ED%99%98%EA%B2%BD]
 
-- Github Action & AWS Code deploy
+- Github Action & AWS Code deploy  
 [https://velog.io/@eeapbh/EC2%EC%97%90-react-%EC%9E%90%EB%8F%99-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B02-github-actions-S3-codedeploy-EC2-CodeDeploy-IAM-%EC%84%A4%EC%A0%95]
 
 
