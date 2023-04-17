@@ -2,10 +2,12 @@
 
 ## PROJECT TREE
 
+```
 github_action_test
-└─ .github
-   └─ workflows
-      └─ deploy.yml
+├─ .github
+│  └─ workflows
+│     └─ deploy.yml
+├─ .gitignore
 ├─ README.md
 ├─ appspec.yml
 ├─ build
@@ -15,7 +17,12 @@ github_action_test
 ├─ package-lock.json
 ├─ package.json
 ├─ public
-│  ├─ ...
+│  ├─ favicon.ico
+│  ├─ index.html
+│  ├─ logo192.png
+│  ├─ logo512.png
+│  ├─ manifest.json
+│  └─ robots.txt
 ├─ server.js
 └─ src
    ├─ App.css
@@ -26,7 +33,7 @@ github_action_test
    ├─ logo.svg
    ├─ reportWebVitals.js
    └─ setupTests.js
-
+```
 
 ### FLOW
 1. master branch push
@@ -49,4 +56,6 @@ REACT EC2 배포
 
 Github Action & AWS Code deploy
 [https://velog.io/@eeapbh/EC2%EC%97%90-react-%EC%9E%90%EB%8F%99-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B02-github-actions-S3-codedeploy-EC2-CodeDeploy-IAM-%EC%84%A4%EC%A0%95]
+
+
 
