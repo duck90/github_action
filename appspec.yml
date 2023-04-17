@@ -11,6 +11,9 @@ permissions:
     group: ubuntu
     mode: 755
 hooks:
+  BeforeInstall:
+    - location: deploy-before.sh
+      runas: root
   AfterInstall:
     - location: deploy.sh
       timeout: 60
