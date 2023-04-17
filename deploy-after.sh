@@ -5,4 +5,4 @@ cd $REPOSITORY
 
 echo "$PWD"
 
-pm3 restart server
+pm2 restart server
