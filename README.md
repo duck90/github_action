@@ -41,12 +41,12 @@ github_action_test
 3. (AWS code deploy) upload ec2 instance from s3 build file
 
 ### Description
-deploy.yml: github action에서 수행해야 할 동작 정의
-appspec.yml: code deploy에서 배포를 관리 (ec2 인스턴스에 배포 동작 정의)
-appspec.yml 내에 있는 hooks 에서 배포 순서에 따른 동작 정의
+- deploy.yml: github action에서 수행해야 할 동작 정의
+- appspec.yml: code deploy에서 배포를 관리 (ec2 인스턴스에 배포 동작 정의)
+- appspec.yml 내에 있는 hooks 에서 배포 순서에 따른 동작 정의
 
-deploy-before.sh: 사전 설치 작업 주기에 실행 되는 동작 정의 (BeforeInstall)
-deploy-after.sh: 서버 재시작 (ApplicationStart)
+- deploy-before.sh: 사전 설치 작업 주기에 실행 되는 동작 정의 (BeforeInstall)
+- deploy-after.sh: 서버 재시작 (ApplicationStart)
 
 
 ## 참고
