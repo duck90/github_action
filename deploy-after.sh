@@ -3,4 +3,4 @@ REPOSITORY=/home/ubuntu/github_action_test
 
 cd $REPOSITORY
 
-pm2 restart server
+pm3 restart server
