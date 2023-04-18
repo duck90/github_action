@@ -1,5 +1,5 @@
 #!/bin/bash
-REPOSITORY=/home/ubuntu/github_action_test
+REPOSITORY=/home/ubuntu/github_action
 
 cd $REPOSITORY
 
