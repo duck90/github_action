@@ -17,7 +17,7 @@ function App() {
         >
           Learn React
         </a>
-        <h1>배포 테스트 1</h1>
+        <h1>배포 테스트 12</h1>
       </header>
     </div>
   );
