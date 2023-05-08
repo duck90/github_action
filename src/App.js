@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import moment from 'moment';
 import './App.css';
 
 function App() {
+  const [text, setText] = useState()
+
+  useEffect(()=>{
+    const timer = setInterval(()=>{ setText(moment().format('YYYY-MM-DD HH:mm:ss'))}, 1000);;
+  
+    return ()=>{ clearTimeout(timer) }
+  }, []);
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <h1>배포 테스트 12</h1>
-      </header>
+      <div className="timerContainer">
+        {text}
+      </div>
     </div>
   );
 }
