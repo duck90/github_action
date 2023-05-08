@@ -60,5 +60,8 @@ github_action_test
 - Domain 연결
 (https://developer-ping9.tistory.com/320)
 
+- nginx 적용
+(https://algosketch.tistory.com/128)
+
 
 
