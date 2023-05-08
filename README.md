@@ -57,5 +57,8 @@ github_action_test
 - Github Action & AWS Code deploy  
 (https://velog.io/@eeapbh/EC2%EC%97%90-react-%EC%9E%90%EB%8F%99-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B02-github-actions-S3-codedeploy-EC2-CodeDeploy-IAM-%EC%84%A4%EC%A0%95)
 
+- Domain 연결
+(https://developer-ping9.tistory.com/320)
+
 
 
